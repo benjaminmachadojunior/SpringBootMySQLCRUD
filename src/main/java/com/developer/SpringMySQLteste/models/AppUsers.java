@@ -1,4 +1,4 @@
-package com.developer.SpringMySQL.models;
+package com.developer.SpringMySQLteste.models;
 
 import javax.persistence.*;
 

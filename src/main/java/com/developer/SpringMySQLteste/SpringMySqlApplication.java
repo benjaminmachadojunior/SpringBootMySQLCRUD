@@ -1,4 +1,4 @@
-package com.developer.SpringMySQL;
+package com.developer.SpringMySQLteste;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,5 @@
-package com.developer.SpringMySQL.controllers;
+package com.developer.SpringMySQLteste.controllers;
 
-import com.developer.SpringMySQL.models.AppUsers;
-import com.developer.SpringMySQL.models.AppUsersRepo;
-import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Created by Pukar on 6/25/2017.
- */
+import com.developer.SpringMySQLteste.models.AppUsers;
+import com.developer.SpringMySQLteste.models.AppUsersRepo;
+
 @Controller
 public class MainController {
 
@@ -21,8 +18,8 @@ public class MainController {
     AppUsersRepo appRepo;
 
     @RequestMapping("/")
-    public ModelAndView doHome(){
-        ModelAndView mv = new ModelAndView("index");
+    public ModelAndView doHome() throws Exception{
+        ModelAndView mv = new ModelAndView(Util.getDataConsulta());
         mv.addObject("lists",appRepo.findAll());
         return mv;
     }
